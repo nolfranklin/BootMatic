@@ -1,7 +1,7 @@
 BootMatic
 =========
 
-BootMatic is a Statamic starter theme built with Bootstrap v.3 (http://getbootstrap.com/) and a few other bells and whistels.
+BootMatic is a Statamic starter theme built with Bootstrap v.3 (http://getbootstrap.com/) and a few other bells and whistels (FitVids, etc).
 
 ### Install
 

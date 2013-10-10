@@ -1,0 +1,25 @@
+
+	<footer role="contentinfo" class="container">
+		<p>
+			&copy; {{ current_date format="Y" }}
+			{{ copyright }}
+		</p>
+		{{ if theme_footer_details }}
+		<p id="theme-details">
+			<a href="{{ _site_url }}">
+				{{ theme_name }} Theme
+			</a>
+			powered by 
+			<a href="http://statamic.com">
+				{{ noparse }}{{ statamic }}{{ /noparse }}
+			</a>
+		</p>
+		{{ endif }}
+		{{ if show_admin_signin_modal }}
+		<p id="admin-signin">
+			<a data-toggle="modal" href="#modal-sign-in">
+				Admin
+			</a>
+		</p>
+		{{ endif }}
+	</footer>

@@ -1,0 +1,25 @@
+
+<section id="single-article-pager">
+	<ul class="pager">
+	{{ if prev }} 
+		{{ entries:listing conditions="url:{ prev }" folder="{blog_folder}" limit="1" }} 
+		<li class="previouss">
+			<a class="button" href="{{slug}}">
+				&larr; {{title}}
+			</a>
+		</li>
+		{{ /entries:listing }} 
+	{{ else }} 
+	{{ endif }}
+	{{ if next }} 
+		{{ entries:listing conditions="url:{ next }" folder="{blog_folder}" limit="1" }} 
+		<li class="nexts">
+			<a class="button" href="{{slug}}">
+				{{title }} &rarr;
+			</a> 
+		</li>
+		{{ /entries:listing }} 
+	{{ else }} 
+	{{ endif }}
+	</ul>
+</section>

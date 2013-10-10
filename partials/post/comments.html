@@ -1,0 +1,10 @@
+{{ if show_comments }}
+<section class="article-comments">
+	<h4>
+		Leave Your Comments
+	</h4>
+	<section class="article-comments-form">
+		{{ disqus:comments account="{ disqus_account }" }}
+	</section>
+</section>
+{{ endif }}

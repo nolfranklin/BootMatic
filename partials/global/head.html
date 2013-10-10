@@ -1,0 +1,50 @@
+
+	<header role="banner" class="navbar {{header_style_class}} {{header_position_class}}">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="{{ homepage }}">
+					{{ _site_name }}
+				</a>
+			</div>
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav {{ if header_nav_pull_right }}pull-right{{ endif }}">
+
+					{{ if show_home_link }}
+					<li {{ if is_current }} class="active"{{ endif }}>
+						<a href="{{ homepage }}"{{ if !segment_1 }} class="active"{{ endif }}>
+							Home
+						</a>
+					</li>
+					{{ endif }}
+
+					{{ nav from="/" max_depth="2" }}
+					<li class="{{ if is_current || is_parent }}active{{endif}} {{ if children }}dropdown{{endif}}">
+						<a href="{{ url }}" {{ if children }}class="dropdown-toggle" data-toggle="dropdown"{{ endif }}>
+							{{ title }}
+							{{ if children }}<b class="caret"></b>{{ endif }}
+						</a>
+						{{ if children }}
+						<ul class="dropdown-menu">
+							{{ children }}
+							<li {{ if is_current }} class="active"{{ endif }}>
+								<a href="{{ url }}">
+									{{ title }}
+								</a>
+							</li>
+							{{ /children }}
+						</ul>
+						{{ endif }}
+					</li>
+					{{ /nav }}
+					
+				</ul>
+			</div>
+		</div>
+	</header>
+	
+  

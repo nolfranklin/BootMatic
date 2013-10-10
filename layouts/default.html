@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="{{ site_description }}">
+	<meta name="author" content="{{ _site_name }}">
+	<link rel="shortcut icon" href="../../assets/ico/favicon.png">
+	<title>{{ if title }}{{ title }} | {{ endif }}{{ _site_name }}</title>
+
+	<link href="{{ theme:asset src='assets/css/lib/bootstrap.css' }}" rel="stylesheet">
+	<link href="{{ theme:asset src='assets/css/style.css' }}" rel="stylesheet">
+	<link rel="alternate" type="application/rss+xml" href="/feed" title="{{ _site_name }} RSS Feed">
+
+</head>
+<body class="{{ if header_position_class == 'navbar-fixed-top' }}fixed-header{{endif}}">
+
+{{ theme:partial src="global/head" }}
+
+	<section role="main" class="container">
+		<div class="row">
+		<section id="content" class="col-lg-9 col-md-9">
+
+{{ layout_content}}
+
+		</section>
+		<section id="side" class="col-lg-3 col-md-3">
+
+{{ theme:partial src="global/side" }}
+
+		</section>
+		</div>
+	</section>
+
+{{ theme:partial src="global/foot" }}
+
+
+	<script type="text/javascript" src="{{ theme:asset src='assets/js/lib/jquery.1.10.2.js' }}"></script>
+	<script type="text/javascript" src="{{ theme:asset src='assets/js/lib/fitvids.1.0.3.js' }}"></script>
+	<script type="text/javascript" src="{{ theme:asset src='assets/js/lib/bootstrap.min.js' }}"></script>
+	<script type="text/javascript" src="{{ theme:asset src='assets/js/theme.js' }}"></script>
+
+{{ theme:partial src="global/modals" }}
+
+
+</body>
+</html>

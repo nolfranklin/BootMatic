@@ -1,0 +1,41 @@
+
+	<footer role="contentinfo" class="container">
+		<nav id="secondary-nav">
+			<ul class="list-inline">
+				<li {{ if is_current }} class="active"{{ endif }}>
+					<a href="{{ homepage }}"{{ if !segment_1 }} class="active"{{ endif }}>
+						Home
+					</a>
+				</li>
+				{{ nav from="/" max_depth="1" }}
+				<li class="{{ if is_current || is_parent }}active{{endif}}">
+					<a href="{{ url }}">
+						{{ title }}
+					</a>
+				</li>
+				{{ /nav }}
+			</ul>
+		</nav>
+		<p id="copyright">
+			&copy; {{ current_date format="Y" }}
+			{{ copyright }}
+		</p>
+		{{ if theme_footer_details }}
+		<p id="theme-details">
+			<a href="{{ _site_url }}">
+				{{ theme_name }} Theme
+			</a>
+			powered by 
+			<a href="http://statamic.com">
+				{{ noparse }}{{ statamic }}{{ /noparse }}
+			</a>
+		</p>
+		{{ endif }}
+		{{ if show_admin_signin_modal }}
+		<p id="admin-signin">
+			<a data-toggle="modal" href="#modal-sign-in">
+				Admin
+			</a>
+		</p>
+		{{ endif }}
+	</footer>

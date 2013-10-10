@@ -1,0 +1,72 @@
+# ----------------------------------
+#
+#	BootMatic
+#	Author: Nol Franklin
+#	Github: https://github.com/nolfranklin/BootMatic
+#
+# ----------------------------------
+
+# Theme Name
+theme_name: BootMatic
+
+
+
+# ----------------------------------
+#
+#	Site Variables
+#
+# ----------------------------------
+
+# Site Description
+site_description: A sample site description that can be edited in your theme.yaml file.
+
+# Show Home in Navigation
+show_home_link: no
+
+# Global text snippets
+no_results_text: "Doh, no results found!"
+
+# Copyright
+copyright: Copyright (theme.yaml)
+
+# Theme Details in Footer
+theme_footer_details: yes
+
+# Admin Sign in Modal
+show_admin_signin_modal: no
+
+
+
+# ----------------------------------
+#
+#	Blog Variables
+#
+# ----------------------------------
+
+# Blog Folder
+blog_folder: blog
+
+# Post Count
+post_count: 5
+
+# Comments + Disqus
+disqus_account: your_disqus_username
+show_comments: no
+
+
+
+# ----------------------------------
+#
+#	Styles Variables
+#
+# ----------------------------------
+
+# Header Style (navbar-default or navbar-inverse)
+header_style_class: navbar-default
+
+# Header Positioning (navbar-static or navbar-fixed-top)
+header_position_class: navbar-fixed-top
+
+# Header Navigation - Right Align
+header_nav_pull_right: yes
+

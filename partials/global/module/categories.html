@@ -1,0 +1,28 @@
+
+{{ taxonomy:listing folder="blog" type="categories" }}
+{{ if no_results }}
+			
+	{{# do nothing #}}
+
+{{ else }}
+
+	{{ if first }}
+	<section class="module module-categories">
+		<h3>
+			Categories
+		</h3>
+		<ul>
+	{{ endif }}
+			<li>
+				<a href="{{ url }}">
+					{{ name }} 
+					<span class="badge">{{ results }}</span>
+				</a>
+			</li>
+	{{ if last }}
+		</ul>
+	</section>
+	{{ endif}}
+
+{{ endif }}
+{{ /taxonomy:listing }}

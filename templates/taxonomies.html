@@ -1,0 +1,59 @@
+{{ if taxonomy_slug }}
+	
+	<header class="page-header">
+		<h1>
+			{{ taxonomy_slug }}
+		</h1>
+	</header>
+	
+	{{ entries:listing folder="{blog_folder}" limit="{post_count}" taxonomy="true" }}
+	{{ if no_results }}
+	<div class="alert alert-danger">
+		{{ no_results_text }}
+	</div>
+	{{ else }}
+	<article>
+		<header class="article-heading">
+			<h2 class="article-title">
+				<a href="{{ url }}">
+					{{ title }}
+				</a>
+			</h2>
+			<p class="article-date">
+				{{ datestamp format="F jS, Y" }}
+			</p>
+		</header>
+		<section class="article-body">
+			{{ content|widont }}
+		</section>
+		<footer class="article-footer">
+			{{ if categories }}
+			<p class="article-meta">
+				Filed under {{ categories_url_list }}.
+			</p>
+			{{ endif }}
+		</footer>
+	</article>
+	{{endif}}
+	{{ /entries:listing }}
+
+	{{ entries:pagination folder="{blog_folder}" limit="{post_count}" taxonomy="yes" }}
+	<ul id="pagination" class="pager">
+	{{ if previous_page }}
+		<li>
+		<a href="{{ previous_page }}">
+			&larr; Older
+		</a>
+		</li>
+	{{ endif }}
+	{{ if next_page }}
+		<li>
+			<a href="{{ next_page }}">
+				Newer &rarr;
+			</a>
+		</li>
+	{{ endif }}
+	</ul>
+	{{ /entries:pagination }}
+
+{{endif}}

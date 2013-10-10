@@ -1,0 +1,71 @@
+// ------------------------
+//
+//	Sass Utilities
+//
+// ------------------------
+
+
+// Media Queries
+
+@mixin media($type) {
+
+	@if $type == tablet {
+		@media only screen and (min-width:768px) and (max-width:991px) {
+			@content;
+		}
+	}
+
+	@else if $type == mobile-portrait {
+		@media only screen and (max-width:767px) {
+			@content;
+		}
+	}
+	
+	@else if $type == mobile-landscape {
+		@media only screen and (min-width: 480px) and (max-width: 767px) {
+			@content;
+		}
+	}
+
+	@else if $type == retina {
+		@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+			@content;
+		}
+	}
+
+}
+
+
+
+// Box Sizing
+
+@mixin box-sizing {
+	-ms-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;		
+}
+
+
+
+// Border Radius
+
+$border-radius: 0;
+@mixin border-radius($border-radius) {
+	-webkit-border-radius: $border-radius;
+	-moz-border-radius: $border-radius;
+	-o-border-radius: $border-radius;
+	border-radius: $border-radius;
+}
+
+
+
+// Box Shadow
+
+$box-shadow: 0 0 0 rgba(0,0,0,.0);
+@mixin box-shadow($box-shadow) {
+	-webkit-box-shadow: $box-shadow;
+	-moz-box-shadow: $box-shadow;
+	-o-box-shadow: $box-shadow;
+	box-shadow: $box-shadow;
+}

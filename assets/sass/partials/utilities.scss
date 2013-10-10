@@ -4,6 +4,12 @@
 //
 // ------------------------
 
+::-moz-selection {background: #ff6;}
+::selection {background: #ff6;}
+
+img::-moz-selection {background: transparent;}
+img::selection {background: transparent;}
+
 
 // Media Queries
 

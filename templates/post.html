@@ -1,25 +1,25 @@
 
-	{{ theme:partial src="post/prev-next-articles" }}
+{{ theme:partial src="post/prev-next-articles" }}
 
-	<article class="post">
-		<header class="post-header">
-			<h2 class="post-title">
-				{{ title }}
-			</h2>
-			<p class="post-date">
-				{{ datestamp format="F jS, Y" }}
-			</p>
-		</header>
-		<section class="post-body">
-			{{ content|widont }}
-		</section>
-		<footer class="post-footer">
-			{{ if categories }}
-			<p class="post-meta">
-				Filed under {{ categories_url_list }}.
-			</p>
-			{{ endif }}
-		</footer>
-	</article>
+<article class="post">
+	<header class="post-header">
+		<h2 class="post-title">
+			{{ title }}
+		</h2>
+		<p class="post-date">
+			{{ datestamp format="F jS, Y" }}
+		</p>
+	</header>
+	<section class="post-body">
+		{{ content|widont }}
+	</section>
+	<footer class="post-footer">
+		{{ if categories }}
+		<p class="post-meta">
+			Filed under {{ categories_url_list }}.
+		</p>
+		{{ endif }}
+	</footer>
+</article>
 
 {{ theme:partial src="post/comments" }}

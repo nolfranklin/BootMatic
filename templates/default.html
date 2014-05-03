@@ -5,23 +5,23 @@
 		{{ no_results_text }}
 	</div>
 	{{ else }}
-	<article>
-		<header class="article-heading">
-			<h2 class="article-title">
+	<article class="post">
+		<header class="post-header">
+			<h2 class="post-title">
 				<a href="{{ url }}">
 					{{ title }}
 				</a>
 			</h2>
-			<p class="article-date">
+			<p class="post-date">
 				{{ datestamp format="F jS, Y" }}
 			</p>
 		</header>
-		<section class="article-body">
+		<section class="post-body">
 			{{ content|widont }}
 		</section>
-		<footer class="article-footer">
+		<footer class="post-footer">
 			{{ if categories }}
-			<p class="article-meta">
+			<p class="post-meta">
 				Filed under {{ categories_url_list }}.
 			</p>
 			{{ endif }}

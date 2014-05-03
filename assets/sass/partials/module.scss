@@ -5,3 +5,17 @@
 ---------------------------- */
 
 // add your styles
+
+/* ===========================
+
+	Post
+
+=========================== */
+
+// Make images in posts and pages fluid.
+
+.post, .page {
+	img {
+		max-width: 100%;
+	}
+}

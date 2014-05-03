@@ -1,22 +1,22 @@
 
-	<article class="article">
+	<article class="post">
 
-{{ theme:partial src="post/prev-next-articles" }}
+		{{ theme:partial src="post/prev-next-posts" }}
 
-		<header class="article-header">
-			<h2 class="article-title">
+		<header class="post-header">
+			<h2 class="post-title">
 				{{ title }}
 			</h2>
-			<p class="article-date">
+			<p class="post-date">
 				{{ datestamp format="F jS, Y" }}
 			</p>
 		</header>
-		<section class="article-body">
+		<section class="post-body">
 			{{ content|widont }}
 		</section>
-		<footer class="article-footer">
+		<footer class="post-footer">
 			{{ if categories }}
-			<p class="article-meta">
+			<p class="post-meta">
 				Filed under {{ categories_url_list }}.
 			</p>
 			{{ endif }}

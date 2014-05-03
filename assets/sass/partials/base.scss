@@ -4,6 +4,14 @@
 
 ---------------------------- */
 
+// Add scroll bars to all pages.
+
+html {
+	height: 100.1%;
+}
+
+// If the header is set to fixed in theme.yaml add padding to body
+
 body.fixed-header {
-	padding-top: 70px;
+	padding-top: 80px;
 }

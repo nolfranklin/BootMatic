@@ -53,6 +53,8 @@ post_count: 5
 disqus_account: your_disqus_username
 show_comments: no
 
+# Pagers
+show_title_pager: yes
 
 
 # ----------------------------------

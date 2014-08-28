@@ -11,6 +11,7 @@ BootMatic is a Statamic starter theme built with Bootstrap v.3 (http://getbootst
 
 ### ToDos
 
+- [ ] Accessibility review
 - [ ] SEO/Meta
 - [ ] Sidebar left/right options
 - [ ] YAMM3 integration
